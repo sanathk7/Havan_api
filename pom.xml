@@ -35,6 +35,18 @@
 		    <version>7.14.0</version>
 		    <scope>test</scope>
 		</dependency>
+	    <dependencies>
+  <!-- Cucumber + JUnit Platform Engine -->
+ 
+  <!-- JUnit Platform Suite API -->
+  <dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-suite</artifactId>
+    <version>1.10.0</version>
+    <scope>test</scope>
+  </dependency>
+</dependencies>
+
 
         <!-- JUnit 5 -->
         <dependency>
