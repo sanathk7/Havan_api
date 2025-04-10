@@ -16,37 +16,33 @@
             <version>4.4.0</version>
         </dependency>
 
-		<!-- Cucumber with JUnit 5 -->
-		<dependency>
-		    <groupId>io.cucumber</groupId>
-		    <artifactId>cucumber-java</artifactId>
-		    <version>7.14.0</version>
-		    <scope>test</scope>
-		</dependency>
-		<dependency>
-		    <groupId>io.cucumber</groupId>
-		    <artifactId>cucumber-junit-platform-engine</artifactId>
-		    <version>7.14.0</version>
-		    <scope>test</scope>
-		</dependency>
-		<dependency>
-		    <groupId>io.cucumber</groupId>
-		    <artifactId>cucumber-picocontainer</artifactId>
-		    <version>7.14.0</version>
-		    <scope>test</scope>
-		</dependency>
-	    <dependencies>
-  <!-- Cucumber + JUnit Platform Engine -->
- 
-  <!-- JUnit Platform Suite API -->
-  <dependency>
-    <groupId>org.junit.platform</groupId>
-    <artifactId>junit-platform-suite</artifactId>
-    <version>1.10.0</version>
-    <scope>test</scope>
-  </dependency>
-</dependencies>
+        <!-- Cucumber with JUnit 5 -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.14.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit-platform-engine</artifactId>
+            <version>7.14.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>7.14.0</version>
+            <scope>test</scope>
+        </dependency>
 
+        <!-- JUnit Platform Suite API -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite</artifactId>
+            <version>1.10.0</version>
+            <scope>test</scope>
+        </dependency>
 
         <!-- JUnit 5 -->
         <dependency>
@@ -61,13 +57,6 @@
             <version>5.11.0</version>
             <scope>test</scope>
         </dependency>
-		<dependency>
-		    <groupId>org.junit.platform</groupId>
-		    <artifactId>junit-platform-suite-api</artifactId>
-		    <version>1.10.0</version>
-		    <scope>test</scope>
-		</dependency>
-
 
         <!-- Jackson for JSON parsing -->
         <dependency>
@@ -89,37 +78,31 @@
             <artifactId>slf4j-simple</artifactId>
             <version>2.0.9</version>
         </dependency>
-		<dependency>
-		    <groupId>com.aventstack</groupId>
-		    <artifactId>extentreports</artifactId>
-		    <version>5.0.9</version>
-		</dependency>
+
+        <!-- Extent Reports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Maven Surefire Plugin for JUnit 5 + Cucumber -->
-			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-surefire-plugin</artifactId>
-			    <version>3.1.2</version>
-			    <configuration>
-			        <useModulePath>false</useModulePath>
-			    </configuration>
-			</plugin>
-		<plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <version>3.1.2</version>
-      <configuration>
-        <includes>
-          <include>**/*Test.java</include>
-          <include>**/*Tests.java</include>
-          <include>**/*TestCase.java</include>
-        </includes>
-        <useModulePath>false</useModulePath> <!-- Important for JUnit 5 -->
-      </configuration>
-    </plugin>
+            <!-- Single Surefire plugin declaration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                        <include>**/*Tests.java</include>
+                        <include>**/*TestCase.java</include>
+                    </includes>
+                    <useModulePath>false</useModulePath>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
