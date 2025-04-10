@@ -18,5 +18,5 @@ import static io.cucumber.junit.platform.engine.Constants.*;
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "steps,hooks") 
 @ConfigurationParameter(key = "cucumber.plugin", value = "pretty, html:target/cucumber-reports.html, json:target/cucumber-reports.json")
 @ConfigurationParameter(key = "cucumber.publish", value = "true")
-public class  RestAssuredTest {
+public class RestAssuredTest{
 }
